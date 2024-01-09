@@ -1,0 +1,9 @@
+# The main pipeline for umpqua_poc_dlt
+resources:
+  pipelines:
+    umpqua_poc_dlt_pipeline:
+      name: umpqua_poc_dlt_pipeline
+      target: umpqua_poc_dlt_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
